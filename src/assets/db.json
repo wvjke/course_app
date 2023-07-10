@@ -1,0 +1,132 @@
+{
+  "appointments": [
+    {
+      "id": 1,
+      "date": "2023-07-01T12:10",
+      "name": "Alex Smith",
+      "service": "Manicure",
+      "phone": "+1 948 945 344",
+      "canceled": false
+    },
+    {
+      "id": 2,
+      "date": "2023-06-01T15:15",
+      "name": "Sam Smith",
+      "service": "Pedicure",
+      "phone": "+1 746 235 890",
+      "canceled": false
+    },
+    {
+      "id": 3,
+      "date": "2023-07-02T09:00",
+      "name": "Alex Collson",
+      "service": "Manicure",
+      "phone": "+1 238 545 045",
+      "canceled": true
+    },
+    {
+      "id": 4,
+      "date": "2023-07-10T09:10",
+      "name": "Kim Paul",
+      "service": "Cleaning",
+      "phone": "+1 928 345 356",
+      "canceled": false
+    },
+    {
+      "id": 5,
+      "date": "2023-07-16T10:00",
+      "name": "Innes Olaf",
+      "service": "Haircut",
+      "phone": "+1 458 895 888",
+      "canceled": false
+    },
+    {
+      "id": 6,
+      "date": "2023-08-01T14:00",
+      "name": "Yan Somer",
+      "service": "Haircut",
+      "phone": "+1 678 995 484",
+      "canceled": true
+    },
+    {
+      "id": 7,
+      "date": "2023-08-18:00",
+      "name": "John Cena",
+      "service": "Haircut",
+      "phone": "+1 678 995 484",
+      "canceled": false
+    },
+    {
+      "id": 8,
+      "date": "2023-08-18:00",
+      "name": "John Cena",
+      "service": "Haircut",
+      "phone": "+1 678 995 484",
+      "canceled": true
+    },
+    {
+      "id": 9,
+      "date": "2023-08-18:00",
+      "name": "John Cena",
+      "service": "Haircut",
+      "phone": "+1 678 995 484",
+      "canceled": true
+    },
+    {
+      "id": 10,
+      "date": "2023-08-18:00",
+      "name": "John Cena",
+      "service": "Haircut",
+      "phone": "+1 678 995 484",
+      "canceled": true
+    },
+    {
+      "name": "Test",
+      "service": "qqq",
+      "phone": "3332",
+      "date": "",
+      "canceled": false,
+      "id": 1689027102265
+    },
+    {
+      "id": 1689027766093,
+      "date": "26/08/2023 18:00",
+      "service": "snthg",
+      "phone": "+4 444 444 444",
+      "name": "dasdas",
+      "canceled": false
+    },
+    {
+      "id": 1689027953489,
+      "date": "26/08/2023 18:00",
+      "service": "snthg",
+      "phone": "+4 444 444 444",
+      "name": "wvjke",
+      "canceled": false
+    },
+    {
+      "id": 1689028383048,
+      "date": "26/08/2023 18:00",
+      "service": "snthg",
+      "phone": "+4 444 444 444",
+      "name": "wvjke",
+      "canceled": false
+    },
+    {
+      "id": 1689028859047,
+      "date": "2023-08-26T18:00",
+      "service": "snthg",
+      "phone": "+4 444 444 444",
+      "name": "wvjke",
+      "canceled": true
+    },
+    {
+      "id": 1689028883802,
+      "date": "2023-11-23T18:00",
+      "service": "snthg",
+      "phone": "+7 777 777 777",
+      "name": "dasdas",
+      "canceled": true
+    }
+  ]
+}

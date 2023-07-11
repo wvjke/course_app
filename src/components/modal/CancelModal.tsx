@@ -39,6 +39,8 @@ const CancelModal: React.FC<IModalProps> = ({
 
     const closeModal = () => {
         handleClose(false);
+        setCancelStatus(null);
+        setBtnDisabled(false);
         if (cancelStatus || cancelStatusRef.current) {
             getActiveAppointments();
         }

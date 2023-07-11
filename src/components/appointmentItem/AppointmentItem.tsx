@@ -1,27 +1,34 @@
 import "./appointmentItem.scss";
 import { IAppointment } from "../../shared/interfaces/appointment.interface";
 import dayjs from "dayjs";
-import { useEffect, useState, memo } from "react";
+import { useEffect, useState, memo, useContext } from "react";
 import { getTimeLeft } from "../../services/TimeLeft";
 import { Optional } from "utility-types";
+import { AppointmentContext } from "../../context/appointments/AppointmentsContext";
 
 type AppointmentProps = Optional<IAppointment, "canceled"> & {
-    openModal: (state: number) => void;
+    openModal?: (state: number) => void;
 };
 
 const AppointmentItem: React.FC<AppointmentProps> = memo(
     ({ id, name, phone, service, date, canceled, openModal }) => {
         const [timeLeft, setTimeLeft] = useState<string | null>(null);
 
+        const { getActiveAppointments } = useContext(AppointmentContext);
+
         useEffect(() => {
             setTimeLeft(getTimeLeft(date));
             const timer = setInterval(() => {
+                if (dayjs(date).diff(dayjs()) <= 1500 && openModal) {
+                    getActiveAppointments();
+                }
                 setTimeLeft(getTimeLeft(date));
-            }, 60000);
+            }, 1000);
 
             return () => {
                 clearInterval(timer);
             };
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [date]);
 
         const formattedDate = dayjs(date).format("DD/MM/YYYY HH:mm");
@@ -38,7 +45,7 @@ const AppointmentItem: React.FC<AppointmentProps> = memo(
                     </span>
                     <span className="appointment__phone">Phone: {phone}</span>
                 </div>
-                {!canceled ? (
+                {!canceled && openModal ? (
                     <>
                         <div className="appointment__time">
                             <span>Time left:</span>

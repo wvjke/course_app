@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "date": "2023-07-16T10:00",
+      "date": "2023-07-11T12:26",
       "name": "Innes Olaf",
       "service": "Haircut",
       "phone": "+1 458 895 888",
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "date": "2023-08-18:00",
+      "date": "2023-07-15T13:00",
       "name": "John Cena",
       "service": "Haircut",
       "phone": "+1 678 995 484",
@@ -58,75 +58,27 @@
     },
     {
       "id": 8,
-      "date": "2023-08-18:00",
-      "name": "John Cena",
-      "service": "Haircut",
+      "date": "2023-07-12T14:30",
+      "name": "Andy Murray",
+      "service": "Cleaning",
       "phone": "+1 678 995 484",
       "canceled": true
     },
     {
       "id": 9,
-      "date": "2023-08-18:00",
-      "name": "John Cena",
-      "service": "Haircut",
+      "date": "2023-07-15T12:30",
+      "name": "John Havlicek",
+      "service": "Cleaning",
       "phone": "+1 678 995 484",
       "canceled": true
     },
     {
-      "id": 10,
-      "date": "2023-08-18:00",
-      "name": "John Cena",
+      "id": 1689068794520,
+      "date": "2023-07-25T18:00",
       "service": "Haircut",
-      "phone": "+1 678 995 484",
-      "canceled": true
-    },
-    {
-      "name": "Test",
-      "service": "qqq",
-      "phone": "3332",
-      "date": "",
-      "canceled": false,
-      "id": 1689027102265
-    },
-    {
-      "id": 1689027766093,
-      "date": "26/08/2023 18:00",
-      "service": "snthg",
-      "phone": "+4 444 444 444",
-      "name": "dasdas",
+      "phone": "+7 888 666 555",
+      "name": "Novak Djokovic",
       "canceled": false
-    },
-    {
-      "id": 1689027953489,
-      "date": "26/08/2023 18:00",
-      "service": "snthg",
-      "phone": "+4 444 444 444",
-      "name": "wvjke",
-      "canceled": false
-    },
-    {
-      "id": 1689028383048,
-      "date": "26/08/2023 18:00",
-      "service": "snthg",
-      "phone": "+4 444 444 444",
-      "name": "wvjke",
-      "canceled": false
-    },
-    {
-      "id": 1689028859047,
-      "date": "2023-08-26T18:00",
-      "service": "snthg",
-      "phone": "+4 444 444 444",
-      "name": "wvjke",
-      "canceled": true
-    },
-    {
-      "id": 1689028883802,
-      "date": "2023-11-23T18:00",
-      "service": "snthg",
-      "phone": "+7 777 777 777",
-      "name": "dasdas",
-      "canceled": true
     }
   ]
 }

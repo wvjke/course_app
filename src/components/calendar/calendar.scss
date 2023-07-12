@@ -1,6 +1,28 @@
 .calendar {
-	width: 280px;
-	height: 272px;
-	background-color: #fff;
-	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    width: 280px;
+    height: 272px;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    &_button {
+        position: inherit;
+        margin-left: 120px;
+        border: 1px solid #ea0000 !important;
+        margin-bottom: 1em !important;
+    }
+    .react-calendar__tile--active {
+        background: #ebbbab;
+        &:enabled:hover {
+            background: #ebbbab;
+        }
+        &:enabled:focus {
+            background: #ebbbab;
+        }
+    }
+}
+
+.react-calendar {
+    text-align: center;
+    &__navigation {
+        margin-bottom: 0;
+    }
 }

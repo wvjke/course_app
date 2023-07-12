@@ -4,7 +4,6 @@ import SchedulePage from "../../pages/schedule/SchedulePage";
 import HistoryPage from "../../pages/history/HistoryPage";
 import AppointmentContextProvider from "../../context/appointments/AppointmentsContext";
 import PageNotFound from "../../pages/404/404";
-
 import "./app.scss";
 
 const router = createBrowserRouter([

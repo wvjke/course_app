@@ -4,13 +4,13 @@ import { useContext, useEffect, useCallback } from "react";
 import Spinner from "../spinner/Spinner";
 import Error from "../error/Error";
 function HistoryList() {
-    const { getAppointments, allAppointments, loadingStatus } =
+    const { getAppointments, allAppointments, loadingStatus, calendarDate } =
         useContext(AppointmentContext);
 
     useEffect(() => {
         getAppointments();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [calendarDate]);
 
     const View = useCallback(() => {
         switch (loadingStatus) {
@@ -29,17 +29,22 @@ function HistoryList() {
                     </>
                 );
             case "idle":
-                return allAppointments.map((item) => (
-                    <AppointmentItem
-                        key={item.id}
-                        id={item.id}
-                        date={item.date}
-                        name={item.name}
-                        service={item.service}
-                        phone={item.phone}
-                        canceled={item.canceled}
-                    />
-                ));
+                if (allAppointments.length === 0) {
+                    return (
+                        <h1
+                            style={{
+                                textAlign: "center",
+                                gridColumn: "1 / -1",
+                            }}
+                        >
+                            No appointments found...
+                        </h1>
+                    );
+                } else {
+                    return allAppointments.map((item) => (
+                        <AppointmentItem {...item} key={item.id} />
+                    ));
+                }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [allAppointments]);

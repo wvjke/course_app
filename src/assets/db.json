@@ -78,7 +78,7 @@
       "service": "Haircut",
       "phone": "+7 888 666 555",
       "name": "Novak Djokovic",
-      "canceled": false
+      "canceled": true
     }
   ]
 }

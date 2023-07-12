@@ -7,7 +7,7 @@ const PageNotFound = () => {
     return (
         <div className="page-not-found">
             <Error />
-            <h1>This page wasn't found</h1>
+            <h1>Error</h1>
             <button onClick={() => navigate(-1)}>Go back</button>
         </div>
     );

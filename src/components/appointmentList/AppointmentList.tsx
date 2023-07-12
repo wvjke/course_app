@@ -8,15 +8,19 @@ import CancelModal from "../modal/CancelModal";
 import { useState, useCallback } from "react";
 
 function AppointmentList() {
-    const { getActiveAppointments, loadingStatus, allActiveAppointments } =
-        useContext(AppointmentContext);
+    const {
+        getActiveAppointments,
+        loadingStatus,
+        allActiveAppointments,
+        calendarDate,
+    } = useContext(AppointmentContext);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedId, selectId] = useState(0);
 
     useEffect(() => {
         getActiveAppointments();
-    }, []);
+    }, [calendarDate]);
 
     const handleOpenModal = useCallback((id: number) => {
         setIsModalOpen(true);
@@ -40,17 +44,25 @@ function AppointmentList() {
                     </>
                 );
             case "idle":
-                return allActiveAppointments.map((item) => (
-                    <AppointmentItem
-                        key={item.id}
-                        id={item.id}
-                        date={item.date}
-                        name={item.name}
-                        service={item.service}
-                        phone={item.phone}
-                        openModal={handleOpenModal}
-                    />
-                ));
+                if (allActiveAppointments.length === 0) {
+                    return (
+                        <h1 style={{ textAlign: "center" }}>
+                            No appointments found...
+                        </h1>
+                    );
+                } else {
+                    return allActiveAppointments.map((item) => (
+                        <AppointmentItem
+                            key={item.id}
+                            id={item.id}
+                            date={item.date}
+                            name={item.name}
+                            service={item.service}
+                            phone={item.phone}
+                            openModal={handleOpenModal}
+                        />
+                    ));
+                }
         }
     }, [allActiveAppointments]);
 

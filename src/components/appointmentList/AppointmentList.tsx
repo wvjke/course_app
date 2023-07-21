@@ -64,7 +64,7 @@ function AppointmentList() {
                     ));
                 }
         }
-    }, [allActiveAppointments]);
+    }, [loadingStatus]);
 
     return (
         <>

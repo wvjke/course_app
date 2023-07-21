@@ -47,7 +47,7 @@ function HistoryList() {
                 }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [allAppointments]);
+    }, [loadingStatus]);
 
     return <View />;
 }

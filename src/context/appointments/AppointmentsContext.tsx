@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { createContext, useReducer } from "react";
+import { loadingStatusType } from "../../hooks/http.hook";
 import { IInitialState } from "./reducer";
 import reducer from "./reducer";
 import { ActionsTypes } from "./actions";
@@ -8,7 +9,6 @@ import { Value } from "react-calendar/dist/cjs/shared/types";
 const initialState: IInitialState = {
     allAppointments: [],
     allActiveAppointments: [],
-    loadingStatus: "idle",
     calendarDate: [null, null],
 };
 
@@ -20,12 +20,13 @@ interface AppointmentContextValue extends IInitialState {
     getAppointments: () => void;
     getActiveAppointments: () => void;
     setDateAndFilter: (newDate: Value) => void;
+    loadingStatus: loadingStatusType;
 }
 
 export const AppointmentContext = createContext<AppointmentContextValue>({
     allAppointments: initialState.allAppointments,
     allActiveAppointments: initialState.allActiveAppointments,
-    loadingStatus: initialState.loadingStatus,
+    loadingStatus: "idle",
     calendarDate: initialState.calendarDate,
     getAppointments: () => {},
     getActiveAppointments: () => {},

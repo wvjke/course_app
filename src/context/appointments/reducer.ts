@@ -4,12 +4,10 @@ import {
     ActiveAppointment,
 } from "../../shared/interfaces/appointment.interface";
 import { ActionsTypes } from "./actions";
-import { loadingStatusType } from "../../hooks/http.hook";
 import { LooseValue } from "react-calendar/dist/cjs/shared/types";
 export interface IInitialState {
     allAppointments: IAppointment[] | [];
     allActiveAppointments: ActiveAppointment[] | [];
-    loadingStatus: loadingStatusType;
     calendarDate: LooseValue;
 }
 
